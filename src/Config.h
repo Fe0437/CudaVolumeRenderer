@@ -8,6 +8,10 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <boost/program_options.hpp>
 namespace po = boost::program_options;
 #include <glm/glm.hpp>
@@ -43,10 +47,10 @@ struct Config{
 	glm::ivec2 resolution;
 
 	//*RENDER VARIABLES*/
-	uint samples;
+	unsigned int samples;
 	float sample_per_pass;
-	uint passes;
-	uint max_ray_bounces;
+	unsigned int passes;
+	unsigned int max_ray_bounces;
 
 	Config(const Scene& _scene):
 			scene(_scene),

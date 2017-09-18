@@ -8,6 +8,10 @@
 #ifndef CUDAVOLPATH_H_
 #define CUDAVOLPATH_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include "Integrator.h"
 #include "helper_cuda.h"
 

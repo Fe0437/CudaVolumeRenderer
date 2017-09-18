@@ -1,6 +1,10 @@
 #ifndef IMAGE_H_
 #define IMAGE_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <glm/glm.hpp>
 #include <cuda_runtime.h>
 #include "helper_math.h"

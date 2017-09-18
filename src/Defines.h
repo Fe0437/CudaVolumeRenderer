@@ -8,6 +8,10 @@
 #ifndef DEFINES_H_
 #define DEFINES_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #define PI                3.1415926535897932384626422832795028841971f
 #define TWO_PI            6.2831853071795864769252867665590057683943f
 #define EPSILON           0.00001f

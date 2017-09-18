@@ -8,6 +8,10 @@
 #ifndef CAMERA_H_
 #define CAMERA_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 #include "Utilities.h"

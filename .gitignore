@@ -3,6 +3,8 @@
 *.m
 .DS_Store
 .settings
+*.opendb
+*.db
 
 # Prerequisites
 *.d

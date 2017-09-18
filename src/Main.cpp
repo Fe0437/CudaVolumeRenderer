@@ -8,11 +8,14 @@
  ============================================================================
  */
 
+#ifdef WIN32
+#include <windows.h>
+#endif
 
 //#include <GL/glew.h>
 //#include <GLFW/glfw3.h>
 //#include <glm/glm.hpp>
-
+/*
 #include "Defines.h"
 
 #include <cuda_runtime.h>
@@ -33,7 +36,6 @@ using namespace std;
 
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
 
 /*
 void errorCallback(int error, const char* description) {
@@ -96,7 +98,7 @@ void mainLoop() {
 */
 
 
-Config initConfig(int argc, char **argv) {
+/*Config initConfig(int argc, char **argv) {
 
 	ConfigParser parser;
 	parser.parseCommandline(argc, argv);
@@ -114,7 +116,7 @@ Config initConfig(int argc, char **argv) {
 
     return config;
 }
-
+*/
 
 
 
@@ -124,7 +126,7 @@ Config initConfig(int argc, char **argv) {
 int
 main(int argc, char **argv)
 {
-	DEVICE_RESET
+	/*DEVICE_RESET
 
 	Config config = initConfig(argc, argv);
 

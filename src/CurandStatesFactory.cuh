@@ -8,6 +8,10 @@
 #ifndef CURANDSTATESFACTORY_H_
 #define CURANDSTATESFACTORY_H_
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 #include "helper_cuda.h"
 
 // CUDA Runtime, Interop, and includes
