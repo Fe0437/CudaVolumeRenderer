@@ -1,0 +1,131 @@
+2018-01-02 16:16:01 INFO  main [mainwindow.cpp:80] Mitsuba version 0.5.0 (Windows, 64 bit), Copyright (c) 2014 Wenzel Jakob
+2018-01-02 16:16:01 INFO  main [mainwindow.cpp:83] Configured for RGB-based rendering
+2018-01-02 16:16:02 DEBUG main [WGLSession] Initializing WGL session
+2018-01-02 16:16:02 DEBUG main [WGLRenderer] Using an existing WGL context
+2018-01-02 16:16:02 DEBUG main [GLRenderer] OpenGL renderer : GeForce GT 650M/PCIe/SSE2
+2018-01-02 16:16:02 DEBUG main [GLRenderer] OpenGL vendor   : NVIDIA Corporation
+2018-01-02 16:16:02 DEBUG main [GLRenderer] OpenGL version  : 4.5.0 NVIDIA 385.54
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Framebuffers objects are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: GLSL is supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Floating point textures are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Floating point color buffers are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Fast buffer blitting is supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Multisample framebuffer objects are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Vertex buffer objects are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Geometry shaders are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Custom texture filtering is supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Synchronization objects are supported.
+2018-01-02 16:16:02 DEBUG main [GLRenderer] Capabilities: Bindless rendering is supported.
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "prvw"
+2018-01-02 16:16:02 DEBUG prvw [WGLDevice] Initializing WGL device
+2018-01-02 16:16:02 DEBUG prvw [WGLRenderer] Initializing WGL renderer
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Accumulation program']
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Directional shadow map generator']
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Paraboloid shadow map generator', maxVertices=4]
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Cube/Hemicube shadow map generator (5/6 pass version)']
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Cube shadow map generator (1 pass version)', maxVertices=18]
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Hemicube shadow map generator (1 pass version)', maxVertices=15]
+2018-01-02 16:16:02 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Gamma]']
+2018-01-02 16:16:02 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Tonemapper [Reinhard et al. 2002]']
+2018-01-02 16:16:02 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Downsampling program']
+2018-01-02 16:16:02 DEBUG main [GLProgram] Uploading a GPU program : GPUProgram[name = 'Log-luminance program']
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "load"
+2018-01-02 16:16:02 INFO  load [sceneloader.cpp:101] Parsing scene description from "C:\Users\Federico\Development\Github\CudaVolumeRenderer\data\mitsubaxml\ad\volpath_bsdf.xml" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\volpath.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\independent.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\box.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\hdrfilm.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\perspective.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\constant.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\gridvolume.dll" ..
+2018-01-02 16:16:02 DEBUG load [GridDataSource] Mapped "density.vol" into memory: 320x320x100 (1 channels, format = float32), 39.1 MiB, AABB3[min=[-1.6, -1.6, -0.5], max=[1.6, 1.6, 0.5]]
+2018-01-02 16:16:02 DEBUG load [GridDataSource] Mapped "albedo.vol" into memory: 320x320x100 (3 channels, format = float32), 117.2 MiB, AABB3[min=[-1.6, -1.6, -0.5], max=[1.6, 1.6, 0.5]]
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\hg.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\heterogeneous.dll" ..
+2018-01-02 16:16:02 DEBUG load [materials.h:194] Medium parameters: sigmaS=[7400, 8800, 10100], sigmaA=[320, 1700, 4800], g=0
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\roughdielectric.dll" ..
+2018-01-02 16:16:02 WARN  load [scenehandler.cpp:795] In file "C:\Users\Federico\Development\Github\CudaVolumeRenderer\data\mitsubaxml\ad\volpath_bsdf.xml" (near line 60): Unqueried attribute "sampleVisible" in element "bsdf"
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\obj.dll" ..
+2018-01-02 16:16:02 INFO  load [WavefrontOBJ] Loading geometry from "bounds.obj" ..
+2018-01-02 16:16:02 INFO  load [WavefrontOBJ] bounds: 12 triangles, 24 vertices (merged 12 vertices).
+2018-01-02 16:16:02 INFO  load [WavefrontOBJ] Done with "bounds.obj" (took 0 ms)
+2018-01-02 16:16:02 INFO  load [KDTreeBase] Constructing a SAH kd-tree (12 primitives) ..
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Creating a preliminary index list (48 B)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Computed scene bounds in 0 ms
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] kd-tree configuration:
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Traversal cost           : 15.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Query cost               : 20.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Empty space bonus        : 0.90
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Max. tree depth          : 11
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Scene bounding box (min) : [-2, -2, -2]
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Scene bounding box (max) : [2, 2, 2]
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Min-max bins             : 128
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    O(n log n) method        : use for <= 65536 primitives
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Perfect splits           : yes
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Retract bad splits       : yes
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Stopping primitive count : 6
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Build tree in parallel   : no
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 INFO  load [KDTreeBase] Finished -- took 0 ms.
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Temporary memory statistics:
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Classification storage : 27 B
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Indirection entries    : 0 (0 B)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Main thread:
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]       Left events   : 1 chunks (512.0 KiB)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]       Right events  : 0 chunks (0 B)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]       kd-tree nodes : 1 entries, 1 blocks (512.0 KiB)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]       Indices       : 12 entries, 1 blocks (512.0 KiB)
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Total: 1.5 MiB
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Optimizing memory layout ..
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Finished -- took 0 ms.
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Structural kd-tree statistics:
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Parallel work units         : 0
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Node storage cost           : 8 B
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Index storage cost          : 48 B
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Inner nodes                 : 0
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Leaf nodes                  : 1
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Nonempty leaf nodes         : 1
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Leaf node histogram         : 0(0) 1(0) 2(0) 3(0) 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]                                  4(0) 5(0) 6(0) 7(0) 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]                                  8(0) 9(0) 10(0) 11(0) 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]                                  12(1) 13(0) 14(0) 15(0) 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] Qualitative kd-tree statistics:
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Retracted splits            : 0
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Pruned primitives           : 0
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Largest leaf node           : 12 primitives
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Avg. prims/nonempty leaf    : 12.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Expected traversals/query   : 0.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Expected leaf visits/query  : 1.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Expected prim. visits/query : 12.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase]    Final cost                  : 240.00
+2018-01-02 16:16:02 DEBUG load [KDTreeBase] 
+2018-01-02 16:16:02 DEBUG load [ShapeKDTree] Precomputing triangle intersection information (576 B)
+2018-01-02 16:16:02 DEBUG load [ShapeKDTree] Finished -- took 0 ms.
+2018-01-02 16:16:02 DEBUG load [ShapeKDTree] 
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\sphere.dll" ..
+2018-01-02 16:16:02 INFO  load [PluginManager] Loading plugin "plugins\diffuse.dll" ..
+2018-01-02 16:16:02 DEBUG load [Thread] Thread "load" has finished
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'Background program']
+2018-01-02 16:16:02 INFO  prvw [PluginManager] Loading plugin "plugins\halton.dll" ..
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'vpl=ConstantBackgroundEmitterShader, bsdf=RoughDielectricShader, ds']
+2018-01-02 16:16:02 DEBUG prvw [GLProgram] Uploading a GPU program : GPUProgram[name = 'vpl=RoughDielectricShader, bsdf=RoughDielectricShader, ds']
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk0"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk1"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk2"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk3"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk4"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk5"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk6"
+2018-01-02 16:16:02 DEBUG main [Thread] Spawning thread "wrk7"
+2018-01-02 16:16:03 DEBUG main [Thread] Spawning thread "rend"
+2018-01-02 16:16:03 INFO  rend [SamplingIntegrator] Starting render job (400x400, 100 samples, 8 cores, SSE2 enabled) ..
+2018-01-02 16:27:00 INFO  rend [RenderJob] Render time: 10.9387m
+2018-01-02 16:27:00 DEBUG rend [HDRFilm] Developing film ..
+2018-01-02 16:27:00 INFO  rend [HDRFilm] Writing image to "C:\Users\Federico\Development\Github\CudaVolumeRenderer\data\mitsubaxml\ad\volpath_bsdf.exr" ..
+2018-01-02 16:27:00 DEBUG rend [Bitmap] Writing a 400x400 OpenEXR file
+2018-01-02 16:27:00 DEBUG rend [Thread] Thread "rend" has finished

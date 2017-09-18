@@ -1,0 +1,15 @@
+services:
+  mhd2vdb:
+    build:
+      context: ../..
+      dockerfile: scripts/convert-mhd/mhd_to_vdb.Dockerfile
+    volumes:
+      - type: bind
+        source: ../../data
+        target: /data
+      - type: bind
+        source: ../../scripts/convert-mhd
+        target: /scripts/convert-mhd
+    working_dir: /
+    environment:
+      - PYTHONPATH=/scripts/convert-mhd

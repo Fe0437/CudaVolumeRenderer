@@ -1,0 +1,55 @@
+#personal
+*.ppm
+*.m
+.DS_Store
+.settings
+*.opendb
+*.db
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Aider
+.aider*
+.env
+
+# Build
+[Bb]uild/
+build_deps/
+vcpkg*/
+_install/
+build.log
+.vscode/
+
+# Scripts
+.venv/

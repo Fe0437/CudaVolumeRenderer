@@ -1,0 +1,12 @@
+{
+  "name": "cuda-volume-renderer",
+  "version": "1.0",
+  "dependencies": [
+    "openvdb",
+    "tbb",
+    "eigen3",
+    "glew",
+    "glfw3",
+    "boost-program-options"
+  ]
+} 
