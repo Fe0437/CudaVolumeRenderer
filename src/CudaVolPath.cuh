@@ -13,7 +13,9 @@
 #endif
 
 #include "Integrator.h"
+
 #include "helper_cuda.h"
+#include "helper_math.h"
 
 #include <cuda_runtime.h>
 #include <cuda_gl_interop.h>
@@ -38,8 +40,6 @@
 #include "CurandStatesFactory.cuh"
 #include "Defines.h"
 #include "Image.h"
-
-#include "helper_cuda.h"
 
 using namespace utilityCore;
 using namespace std;
@@ -94,7 +94,7 @@ class CudaVolPath: public Integrator {
 	uint n_active_pixels_;
 
 	//device variables to set
-	int* d_active_pixels_;
+	int* d_active_pixels_ = 0;
 	Ray* d_rays_ = 0;
 	float4* d_output_ = 0;
 	cudaArray *d_albedo_array_ = 0;
@@ -111,14 +111,12 @@ public:
 	void copyInvViewMatrix(float* invViewMatrix, size_t sizeofMatrix);
 
 	void render();
-
 	void saveImage();
 
 private:
 
 	template < class VolumeType>
 		cudaTextureObject_t createTextureWithVolume(cudaArray * d_array, VolumeType *h_volume, cudaExtent volumeSize);
-
 	void initCamera();
 	void initRandom();
 	void initRendering();

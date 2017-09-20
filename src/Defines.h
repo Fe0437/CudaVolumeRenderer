@@ -12,8 +12,12 @@
 #include <windows.h>
 #endif
 
+
+#define INV_FOURPI 0.0796
+#define INV_PI 0.3184
+
 #define PI                3.1415926535897932384626422832795028841971f
-#define TWO_PI            6.2831853071795864769252867665590057683943f
+#define TWOPI            6.2831853071795864769252867665590057683943f
 #define EPSILON           0.00001f
 #ifndef MAX
 #define MAX(a,b) (a > b ? a : b)

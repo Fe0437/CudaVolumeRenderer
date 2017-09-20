@@ -12,10 +12,10 @@
 #include <windows.h>
 #endif
 
-//#include <GL/glew.h>
-//#include <GLFW/glfw3.h>
-//#include <glm/glm.hpp>
-/*
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+
 #include "Defines.h"
 
 #include <cuda_runtime.h>
@@ -37,11 +37,11 @@ using namespace std;
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-/*
+
 void errorCallback(int error, const char* description) {
     fprintf(stderr, "%s\n", description);
 }
-
+/*
 void initGL(){
 
     glfwSetErrorCallback(errorCallback);
@@ -73,8 +73,8 @@ void initGL(){
 
     glUseProgram(passthroughProgram);
     glActiveTexture(GL_TEXTURE0);
-}
-
+}*/
+/*
 void mainLoop() {
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -98,13 +98,11 @@ void mainLoop() {
 */
 
 
-/*Config initConfig(int argc, char **argv) {
+Config initConfig(int argc, char **argv) {
 
 	ConfigParser parser;
 	parser.parseCommandline(argc, argv);
-	printf("command line parsed \n");
 	Config config = parser.createConfig();
-	printf("command line parsed \n");
 
 	if(config.interactive){
 		//INIT GL
@@ -116,7 +114,7 @@ void mainLoop() {
 
     return config;
 }
-*/
+
 
 
 
@@ -126,21 +124,19 @@ void mainLoop() {
 int
 main(int argc, char **argv)
 {
-	/*DEVICE_RESET
+	DEVICE_RESET
 
 	Config config = initConfig(argc, argv);
 
 	glm::ivec2 vec = glm::ivec2(1,1);
-	printf("config done \n");
 	CudaVolPath volpath(config, vec);
 
-	printf("rendering \n");
 	volpath.render();
-	printf("rendered \n");
 
 	volpath.saveImage();
 
 	cudaDeviceSynchronize();
+
 	DEVICE_RESET
 
 /*

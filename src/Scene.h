@@ -23,7 +23,11 @@ public:
 	Volume(
 			VolumeType* vol_data,
 			glm::vec3 volume_size
-	):vol_data_(vol_data),volume_size_(volume_size){}
+	):
+		vol_data_(vol_data),
+		volume_size_(volume_size)
+	{}
+
 	Volume():vol_data_(0){}
 
 	VolumeType* getVolumeData(){ return vol_data_;}
@@ -112,8 +116,10 @@ public:
 	~XMLSceneBuilder() = default;
 
 	void parse(string filename){
-		albedo_volume_ = Volume<ALBEDO_T>((ALBEDO_T*) loadVolFile<ALBEDO_T>("/Users/macbook/cuda-workspace/CudaVolumeRenderer/data/albedo.vol"), volume_size_);
-		density_volume_ = Volume<FLOAT>((FLOAT *) loadVolFile<FLOAT>("/Users/macbook/cuda-workspace/CudaVolumeRenderer/data/density.vol"), volume_size_);
+		auto albedo_data = (ALBEDO_T*)loadVolFile<ALBEDO_T>("../../data/cgg_logo/volume_cgglogo.vol");
+		albedo_volume_ = Volume<ALBEDO_T>(albedo_data, volume_size_);
+		auto density_data = (FLOAT *)loadVolFile<FLOAT>("../../data/cgg_logo/volume_cgglogo.vol");
+		density_volume_ = Volume<FLOAT>(density_data, volume_size_);
 	}
 
 	 virtual glm::vec3 getBoxMin(){return box_min_;}
@@ -129,7 +135,8 @@ private:
 		      for (int x = 0; x < volume_size_.x; x++)
 		        {
 		    	  float* p = &volData[((z*volume_size_.y + y)*volume_size_.x + x)*3];
-		    	  *rawData = make_float4(float(*p),float(*(p+1)), float(*(p+2)), (float) 1);
+		    	  *rawData =make_float4(float(*p),float(*(p+1)), float(*(p+2)), (float) 1);
+				  //printf("color %f %f %f at position %f %f %f \n", float(*p), float(*(p + 1)), float(*(p + 2)), float(x)/volume_size_.x, float(y) / volume_size_.y, float(z) / volume_size_.z);
 		    	  rawData++;
 		        }
 		}
@@ -161,7 +168,7 @@ private:
 	        fprintf(stderr, "Error opening file '%s'\n", (char*) filename.c_str());
 	        return 0;
 	    }
-	    int size = stream.tellg();
+	    int size = (int)stream.tellg();
 	    stream.seekg (0, ios::beg);
 
 	    char header[3];
