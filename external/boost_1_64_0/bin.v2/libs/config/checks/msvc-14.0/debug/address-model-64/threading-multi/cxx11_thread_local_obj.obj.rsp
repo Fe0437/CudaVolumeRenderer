@@ -1,4 +1,0 @@
-"C:\Users\Federico\Development\Github\CudaVolumeRenderer\external\boost_1_64_0\libs\config\checks\test_case.cpp" -Fo"bin.v2\libs\config\checks\msvc-14.0\debug\address-model-64\threading-multi\cxx11_thread_local_obj.obj"    -TP /Z7 /Od /Ob0 /W3 /GR /MDd /Zc:forScope /Zc:wchar_t /favor:blend /wd4675 /EHs -c 
--DBOOST_ALL_NO_LIB=1 
--DTEST_BOOST_NO_CXX11_THREAD_LOCAL 
-"-I."
