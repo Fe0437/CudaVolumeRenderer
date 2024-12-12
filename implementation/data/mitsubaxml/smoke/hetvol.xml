@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene version="0.5.0">
+	<integrator type="volpath">
+		<integer name="maxDepth" value="10000000"/>
+	</integrator>
+
+	<medium type="heterogeneous" id="smoke">
+		<string name="method" value="woodcock"/>
+
+		<volume name="density" type="gridvolume">
+			<string name="filename" value="smoke.vol"/>
+		</volume>
+
+		<volume name="albedo" type="gridvolume">
+			<string name="filename" value="albedo.vol"/>
+		</volume>
+		
+		<float name="scale" value="800"/>
+	</medium>
+	
+
+	<shape type="obj">
+		<string name="filename" value="bounds.obj"/>
+		<ref name="interior" id="smoke"/>
+	</shape>
+
+	<sensor type="perspective">
+		<float name="fov" value="0.33"/>
+		<transform name="toWorld">
+			<lookat target="0, 0, 0" origin="0.0, 0.0, 100" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="independent">
+			<integer name="sampleCount" value="100"/>
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="height" value="400"/>
+			<integer name="width" value="400"/>
+			<rfilter type="box" />
+			<boolean name="banner" value="false"/>
+		</film>
+	</sensor>
+	
+	<emitter type="constant" id="EnvmapIllumination">
+		<spectrum name="radiance" value="1"/>
+	</emitter>
+	
+</scene>
